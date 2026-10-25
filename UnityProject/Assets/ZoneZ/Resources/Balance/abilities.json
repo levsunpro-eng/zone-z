@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "balanceVersion": "1.0.2",
+  "purchaseRules": { "currencyId": "credits", "permanentUnlock": true, "equippedPerMatch": 1, "purchaseRequiredBeforeCharging": true, "defaultUnlockedId": "frag_grenade", "changeDuringMatch": false },
+  "chargeRules": {
+    "windowSeconds": 20,
+    "windowTicks": 1200,
+    "windowEndInclusive": true,
+    "windowStartsAtFirstEligibleKill": true,
+    "killsExtendWindow": false,
+    "maximumStoredCharges": 1,
+    "unfinishedStreakResetsOnDeath": true,
+    "eligibleKills": "enemy_player_by_non_ultimate_damage_while_killer_alive",
+    "excludeUltimateKills": true,
+    "canChargeWhileReady": false,
+    "canChargeWhileActive": false,
+    "deathmatchReadyChargePersistsOnDeath": true,
+    "activeEffectsEndOnDeath": true,
+    "teamResetBeforeRound": true
+  },
+  "sharedEffects": {
+    "strengthUpgradeApplies": false,
+    "explosionFalloff": "linear_max_at_center_zero_at_radius",
+    "solidObjectsBlockExplosions": true,
+    "woodBlocksExplosions": true,
+    "selfExplosionDamage": true,
+    "sameStatLootAndUltimateStacking": "strongest_only"
+  },
+  "abilities": [
+    { "id": "frag_grenade", "nameRu": "Осколочная граната", "priceCredits": 0, "killsRequired": 3, "effect": { "type": "thrown_explosive", "charges": 1, "fuseSeconds": 2, "maximumDamage": 120, "radiusMeters": 5 } },
+    { "id": "adrenaline", "nameRu": "Адреналин", "priceCredits": 600, "killsRequired": 3, "effect": { "type": "movement_speed", "multiplier": 1.35, "durationSeconds": 8 } },
+    { "id": "medical_pulse", "nameRu": "Медицинский импульс", "priceCredits": 900, "killsRequired": 3, "effect": { "type": "instant_heal", "health": 60, "cap": "current_maximum_health" } },
+    { "id": "armor_shield", "nameRu": "Бронещит", "priceCredits": 1200, "killsRequired": 4, "effect": { "type": "temporary_shield", "capacity": 75, "durationSeconds": 10 } },
+    { "id": "recon_pulse", "nameRu": "Разведимпульс", "priceCredits": 1600, "killsRequired": 4, "effect": { "type": "enemy_reveal", "radiusMeters": 25, "durationSeconds": 5, "updateIntervalSeconds": 1, "throughWalls": true, "audience": "owner" } },
+    { "id": "emp_grenade", "nameRu": "ЭМИ-граната", "priceCredits": 2000, "killsRequired": 4, "effect": { "type": "thrown_emp", "charges": 1, "fuseSeconds": 2, "radiusMeters": 8, "damage": 0, "removeTemporaryBuffs": true, "disableUltimateActivationSeconds": 5 } },
+    { "id": "underbarrel", "nameRu": "Подствольник", "priceCredits": 2600, "killsRequired": 4, "effect": { "type": "temporary_explosive_weapon", "shots": 2, "maximumDamage": 80, "radiusMeters": 3, "durationSeconds": 10 } },
+    { "id": "laser_burst", "nameRu": "Лазерный разряд", "priceCredits": 3400, "killsRequired": 5, "effect": { "type": "temporary_hitscan_weapon", "shots": 2, "damage": 120, "rangeMeters": 60, "durationSeconds": 10, "spread": 0, "penetratesWood": true } },
+    { "id": "rocket_launcher", "nameRu": "Ракетомёт", "priceCredits": 4500, "killsRequired": 6, "effect": { "type": "temporary_unguided_rocket_launcher", "shots": 1, "maximumDamage": 180, "radiusMeters": 6, "durationSeconds": 10 } },
+    { "id": "absolute_shot", "nameRu": "Абсолютный выстрел", "priceCredits": 6500, "killsRequired": 5, "effect": { "type": "instant_kill_bullets", "durationSeconds": 6, "anyBodyPart": true, "includesShotgunPellets": true, "ignoresArmor": true, "ignoresTemporaryShield": true, "respectsNonWoodObstacles": true, "respectsSpawnProtection": true, "affectsMeleeOrExplosives": false } }
+  ],
+  "implementationAssumptions": [
+    "Убийства после смерти стрелка учитываются в счёте матча, но не заряжают его ульту.",
+    "Активация расходует заряд один раз; промах, смерть или ЭМИ его не возвращают.",
+    "Подствольник, лазер и ракетомёт временно заменяют оружие в руках; их снаряды не получают множитель головы. Q выдаёт временное оружие, ЛКМ выполняет выстрел; смена обычного слота блокируется до расходования или завершения эффекта.",
+    "Ракетомёт, как подствольник и лазер, можно удерживать до 10 секунд; это время использования оружия, а не время полёта уже выпущенной ракеты.",
+    "Разведка показывает отметки только владельцу, включая врагов за стеной; обновления в моменты 0,1,2,3,4 секунды.",
+    "ЭМИ взрывается через 2 секунды, действует на врагов и владельца в прямой видимости взрыва, не наносит HP-урон и не удаляет купленные способности или готовый заряд.",
+    "ЭМИ снимает активные временные бонусы, включая временное оружие; блокирует только новую активацию ульты на 5 секунд. Подбор лута после попадания ЭМИ разрешён.",
+    "Выпущенный до смерти снаряд сохраняется до столкновения, взрыва или завершения раунда; смерть прекращает будущие выстрелы и активные личные бонусы.",
+    "Длительность временных эффектов использует полуоткрытый интервал [начало, конец); включительная граница относится только к 20-секундной серии."
+  ]
+}

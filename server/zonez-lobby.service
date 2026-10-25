@@ -1,0 +1,27 @@
+[Unit]
+Description=ZoneZ invitation lobby and matchmaking relay
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=zonez
+Group=zonez
+WorkingDirectory=/opt/zonez/server
+ExecStart=/usr/bin/python3 /opt/zonez/server/lobby_server.py --host 0.0.0.0 --port 7780 --cert /etc/zonez/fullchain.pem --key /etc/zonez/privkey.pem
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+CapabilityBoundingSet=
+MemoryMax=1G
+TasksMax=64
+
+[Install]
+WantedBy=multi-user.target

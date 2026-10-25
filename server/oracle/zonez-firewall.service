@@ -1,0 +1,12 @@
+[Unit]
+Description=Add ZoneZ inbound ports while preserving Oracle firewall rules
+After=network-pre.target
+Before=zonez-lobby.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/libexec/zonez-firewall
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

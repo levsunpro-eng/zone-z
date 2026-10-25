@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "balanceVersion": "1.0.2",
+  "modeId": "deathmatch",
+  "spawnRules": {
+    "fixedPointCount": 12,
+    "activePointsPerWave": 6,
+    "firstWaveSeconds": 0,
+    "waveIntervalSeconds": 60,
+    "waveIntervalTicks": 3600,
+    "pickupLifetimeSeconds": 45,
+    "waveTimesSeconds": [0, 60, 120, 180, 240, 300, 360, 420, 480, 540],
+    "uniquePointsWithinWave": true,
+    "typesPerWave": "one_of_each",
+    "pickupInteraction": "E",
+    "temporaryBuffSlots": 1,
+    "replacementPolicy": "new_replaces_old",
+    "instantHealConsumesTemporarySlot": false,
+    "sameStatUltimateStacking": "strongest_only",
+    "effectsEndOnDeath": true
+  },
+  "loot": [
+    { "id": "medkit", "nameRu": "Аптечка", "effect": { "type": "instant_heal", "health": 35, "maximumHealth": 100 } },
+    { "id": "protective_field", "nameRu": "Защитное поле", "effect": { "type": "temporary_shield", "capacity": 40, "durationSeconds": 15 } },
+    { "id": "haste", "nameRu": "Ускорение", "effect": { "type": "movement_speed", "multiplier": 1.25, "durationSeconds": 12 } },
+    { "id": "fast_reload", "nameRu": "Быстрая перезарядка", "effect": { "type": "reload_duration", "multiplier": 0.7, "durationSeconds": 12 } },
+    { "id": "stabilizer", "nameRu": "Стабилизатор", "effect": { "type": "weapon_stability", "spreadMultiplier": 0.75, "recoilMultiplier": 0.75, "durationSeconds": 12 } },
+    { "id": "vampirism", "nameRu": "Вампиризм", "effect": { "type": "health_damage_lifesteal", "fraction": 0.25, "maximumHealth": 100, "durationSeconds": 10 } }
+  ],
+  "implementationAssumptions": [
+    "Каждая волна содержит по одному объекту каждого из шести типов, случайно распределённых по шести различным точкам.",
+    "Подбор выполняется действием E в пределах 1.5 м при прямой видимости; объект достаётся первому обработанному допустимому запросу.",
+    "Аптечка при полном HP не подбирается. Смерть удаляет временные бонусы лута.",
+    "Повторный подбор того же бонуса заново запускает его длительность и значение; длительности не складываются.",
+    "Вампиризм возвращает только фактически снятые HP врага, без избыточного урона, брони, щита, собственного урона и мгновенного убийства Абсолютным выстрелом.",
+    "При одновременных щитах действует наибольший оставшийся запас; поглощённый урон уменьшает каждый ещё активный запас, поэтому ёмкости не суммируются.",
+    "Быстрая перезарядка фиксирует длительность при старте текущей перезарядки; исчезновение бонуса её не пересчитывает.",
+    "Случайная перестановка точек и типов использует записанный seed матча для воспроизведения."
+  ]
+}

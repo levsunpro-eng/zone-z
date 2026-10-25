@@ -1,0 +1,943 @@
+{
+  "AssaultRifle2_1": [
+    {
+      "name": "AssaultRifle2_1",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        5.168816089630127,
+        0.3464050889015198,
+        1.7904822826385498
+      ],
+      "materials": [
+        "Main",
+        "MainDark",
+        "Metal",
+        "DarkMetal",
+        "DarkWood",
+        "MainLight"
+      ],
+      "vertices": 1017
+    }
+  ],
+  "AssaultRifle2_2": [
+    {
+      "name": "AssaultRifle2_2",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        4.826422691345215,
+        0.2693226635456085,
+        1.790481686592102
+      ],
+      "materials": [
+        "Main",
+        "MainDark",
+        "Metal",
+        "DarkWood",
+        "MainLight",
+        "DarkMetal"
+      ],
+      "vertices": 995
+    }
+  ],
+  "AssaultRifle2_3": [
+    {
+      "name": "AssaultRifle2_3",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        3.7526495456695557,
+        0.3464050889015198,
+        1.4576187133789062
+      ],
+      "materials": [
+        "Main",
+        "MainDark",
+        "Metal",
+        "MainLight",
+        "DarkWood",
+        "DarkMetal"
+      ],
+      "vertices": 858
+    }
+  ],
+  "AssaultRifle2_4": [
+    {
+      "name": "AssaultRifle2_4",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        2.9573135375976562,
+        0.24469932913780212,
+        1.5546610355377197
+      ],
+      "materials": [
+        "Main",
+        "MainDark",
+        "Metal",
+        "DarkMetal",
+        "MainLight"
+      ],
+      "vertices": 747
+    }
+  ],
+  "AssaultRifle_1": [
+    {
+      "name": "AssaultRifle_1",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        3.104801654815674,
+        0.19602099061012268,
+        1.2600144147872925
+      ],
+      "materials": [
+        "Wood",
+        "Black",
+        "DarkMetal",
+        "Metal",
+        "DarkWood"
+      ],
+      "vertices": 700
+    }
+  ],
+  "AssaultRifle_2": [
+    {
+      "name": "AssaultRifle_2",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        5.421657085418701,
+        0.19602099061012268,
+        1.6013617515563965
+      ],
+      "materials": [
+        "Wood",
+        "Black",
+        "DarkMetal",
+        "Metal",
+        "DarkWood"
+      ],
+      "vertices": 688
+    }
+  ],
+  "AssaultRifle_3": [
+    {
+      "name": "AssaultRifle_3",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        3.43115496635437,
+        0.19602099061012268,
+        1.6013617515563965
+      ],
+      "materials": [
+        "Wood",
+        "Black",
+        "DarkMetal",
+        "Metal",
+        "DarkWood"
+      ],
+      "vertices": 640
+    }
+  ],
+  "AssaultRifle_4": [
+    {
+      "name": "AssaultRifle_4",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        5.493686199188232,
+        0.19602099061012268,
+        1.6013617515563965
+      ],
+      "materials": [
+        "Wood",
+        "Black",
+        "DarkMetal",
+        "Metal",
+        "DarkWood"
+      ],
+      "vertices": 728
+    }
+  ],
+  "AssaultRifle_5": [
+    {
+      "name": "AssaultRifle_5",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        5.421657085418701,
+        0.19602099061012268,
+        1.601361632347107
+      ],
+      "materials": [
+        "Black",
+        "DarkMetal",
+        "Metal",
+        "DarkWood"
+      ],
+      "vertices": 688
+    }
+  ],
+  "Bullpup_1": [
+    {
+      "name": "Bullpup_1",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        5.248059272766113,
+        0.3102843165397644,
+        1.540889024734497
+      ],
+      "materials": [
+        "MainDark",
+        "Main",
+        "MainLight"
+      ],
+      "vertices": 1490
+    }
+  ],
+  "Bullpup_2": [
+    {
+      "name": "Bullpup_2",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        3.756657123565674,
+        0.3102843165397644,
+        1.5177642107009888
+      ],
+      "materials": [
+        "MainDark",
+        "Main",
+        "MainLight"
+      ],
+      "vertices": 1358
+    }
+  ],
+  "Bullpup_3": [
+    {
+      "name": "Bullpup_3",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        4.305397987365723,
+        0.3102843165397644,
+        1.5956170558929443
+      ],
+      "materials": [
+        "Black",
+        "Main",
+        "MainDark",
+        "MainLight"
+      ],
+      "vertices": 1290
+    }
+  ],
+  "Pistol_1": [
+    {
+      "name": "Pistol_1",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        1.8194010257720947,
+        0.3232097625732422,
+        1.1615557670593262
+      ],
+      "materials": [
+        "DarkWood",
+        "DarkMetal",
+        "Metal",
+        "Black",
+        "Wood",
+        "Black2"
+      ],
+      "vertices": 580
+    }
+  ],
+  "Pistol_2": [
+    {
+      "name": "Pistol_2",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        1.8194010257720947,
+        0.3232097625732422,
+        1.1615556478500366
+      ],
+      "materials": [
+        "Wood",
+        "DarkMetal",
+        "Metal",
+        "Black",
+        "LightMetal"
+      ],
+      "vertices": 660
+    }
+  ],
+  "Pistol_3": [
+    {
+      "name": "Pistol_3",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        1.84495210647583,
+        0.3287210464477539,
+        1.2931283712387085
+      ],
+      "materials": [
+        "Wood",
+        "DarkMetal",
+        "LightMetal",
+        "Black",
+        "Metal"
+      ],
+      "vertices": 782
+    }
+  ],
+  "Pistol_4": [
+    {
+      "name": "Pistol_4",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        1.9755146503448486,
+        0.30093297362327576,
+        1.6281732320785522
+      ],
+      "materials": [
+        "Metal",
+        "Black",
+        "LightMetal"
+      ],
+      "vertices": 687
+    }
+  ],
+  "Pistol_5": [
+    {
+      "name": "Pistol_5",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        1.8193072080612183,
+        0.2743567228317261,
+        1.198644757270813
+      ],
+      "materials": [
+        "Metal",
+        "Black",
+        "LightMetal"
+      ],
+      "vertices": 530
+    }
+  ],
+  "Pistol_6": [
+    {
+      "name": "Pistol_6",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        2.447174310684204,
+        0.3087720274925232,
+        1.161555528640747
+      ],
+      "materials": [
+        "Metal",
+        "Black",
+        "LightMetal"
+      ],
+      "vertices": 1121
+    }
+  ],
+  "Revolver_1": [
+    {
+      "name": "Revolver_1",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        1.9818944931030273,
+        0.2943563461303711,
+        0.8898082971572876
+      ],
+      "materials": [
+        "Metal",
+        "LightMetal",
+        "Wood"
+      ],
+      "vertices": 526
+    }
+  ],
+  "Revolver_2": [
+    {
+      "name": "Revolver_2",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        1.9818952083587646,
+        0.2943563461303711,
+        0.9437109231948853
+      ],
+      "materials": [
+        "DarkWood",
+        "LightMetal",
+        "Metal",
+        "Grey"
+      ],
+      "vertices": 672
+    }
+  ],
+  "Revolver_3": [
+    {
+      "name": "Revolver_3",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        1.984986424446106,
+        0.2943563163280487,
+        0.9824901223182678
+      ],
+      "materials": [
+        "DarkWood",
+        "LightMetal",
+        "Metal",
+        "Grey"
+      ],
+      "vertices": 798
+    }
+  ],
+  "Revolver_4": [
+    {
+      "name": "Revolver_4",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        1.4726619720458984,
+        0.2943563461303711,
+        0.9151177406311035
+      ],
+      "materials": [
+        "Metal",
+        "LightMetal",
+        "DarkWood"
+      ],
+      "vertices": 508
+    }
+  ],
+  "Revolver_5": [
+    {
+      "name": "Revolver_5",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        1.9011051654815674,
+        0.2943563461303711,
+        0.9627271890640259
+      ],
+      "materials": [
+        "Metal",
+        "LightMetal",
+        "Grey",
+        "Metal"
+      ],
+      "vertices": 706
+    }
+  ],
+  "Shotgun_1": [
+    {
+      "name": "Shotgun_1",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        5.214978218078613,
+        0.2465335726737976,
+        0.9426805973052979
+      ],
+      "materials": [
+        "LightMetal",
+        "Metal",
+        "DarkMetal",
+        "Black"
+      ],
+      "vertices": 670
+    }
+  ],
+  "Shotgun_2": [
+    {
+      "name": "Shotgun_2",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        5.784901142120361,
+        0.24653360247612,
+        0.9494554996490479
+      ],
+      "materials": [
+        "Metal",
+        "Black",
+        "DarkMetal",
+        "Wood",
+        "DarkWood"
+      ],
+      "vertices": 410
+    }
+  ],
+  "Shotgun_3": [
+    {
+      "name": "Shotgun_3",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        5.784900188446045,
+        0.2465335726737976,
+        0.9426806569099426
+      ],
+      "materials": [
+        "Wood",
+        "Metal",
+        "DarkWood",
+        "DarkMetal",
+        "Black"
+      ],
+      "vertices": 524
+    }
+  ],
+  "Shotgun_4": [
+    {
+      "name": "Shotgun_4",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        5.448816299438477,
+        0.19927680492401123,
+        0.9267553091049194
+      ],
+      "materials": [
+        "Wood",
+        "Metal",
+        "DarkWood",
+        "DarkMetal",
+        "Black"
+      ],
+      "vertices": 362
+    }
+  ],
+  "Shotgun_SawedOff": [
+    {
+      "name": "Shotgun_SawedOff",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        3.6882009506225586,
+        0.4224516749382019,
+        1.0201300382614136
+      ],
+      "materials": [
+        "DarkMetal",
+        "Black",
+        "Wood",
+        "Metal",
+        "DarkWood"
+      ],
+      "vertices": 500
+    }
+  ],
+  "Shotgun_ShortStock": [
+    {
+      "name": "Shotgun_ShortStock",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        4.471266269683838,
+        0.2465335875749588,
+        0.9668998718261719
+      ],
+      "materials": [
+        "Wood",
+        "Metal",
+        "DarkWood",
+        "DarkMetal",
+        "Black"
+      ],
+      "vertices": 839
+    }
+  ],
+  "SniperRifle_1": [
+    {
+      "name": "SniperRifle_1",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        7.294632911682129,
+        0.459310382604599,
+        1.4839725494384766
+      ],
+      "materials": [
+        "Green",
+        "Black",
+        "DarkMetal",
+        "Glass",
+        "Grey",
+        "LightMetal"
+      ],
+      "vertices": 746
+    }
+  ],
+  "SniperRifle_2": [
+    {
+      "name": "SniperRifle_2",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        7.413838863372803,
+        0.4846460223197937,
+        1.5074455738067627
+      ],
+      "materials": [
+        "Black",
+        "DarkMetal",
+        "LightMetal",
+        "Grey",
+        "Glass"
+      ],
+      "vertices": 886
+    }
+  ],
+  "SniperRifle_3": [
+    {
+      "name": "SniperRifle_3",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        7.244653224945068,
+        0.44573724269866943,
+        1.2007859945297241
+      ],
+      "materials": [
+        "Green",
+        "Black",
+        "DarkMetal",
+        "Glass",
+        "Grey"
+      ],
+      "vertices": 908
+    }
+  ],
+  "SniperRifle_4": [
+    {
+      "name": "SniperRifle_4",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        6.335608005523682,
+        0.459310382604599,
+        1.348266363143921
+      ],
+      "materials": [
+        "DarkMetal",
+        "Black",
+        "Metal",
+        "Glass",
+        "Grey"
+      ],
+      "vertices": 732
+    }
+  ],
+  "SniperRifle_5": [
+    {
+      "name": "SniperRifle_5",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        6.335608005523682,
+        1.2478505373001099,
+        1.8992804288864136
+      ],
+      "materials": [
+        "DarkMetal",
+        "LightMetal",
+        "Metal",
+        "Black",
+        "Grey",
+        "Glass"
+      ],
+      "vertices": 884
+    }
+  ],
+  "SniperRifle_6": [
+    {
+      "name": "SniperRifle_6",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        7.2060041427612305,
+        0.4935957193374634,
+        1.5182597637176514
+      ],
+      "materials": [
+        "DarkWood",
+        "Black",
+        "DarkMetal",
+        "Grey",
+        "Glass"
+      ],
+      "vertices": 738
+    }
+  ],
+  "SubmachineGun_1": [
+    {
+      "name": "SubmachineGun_1",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        2.7714691162109375,
+        0.3185453414916992,
+        1.7086849212646484
+      ],
+      "materials": [
+        "DarkMetal",
+        "Metal",
+        "Black",
+        "Grey"
+      ],
+      "vertices": 642
+    }
+  ],
+  "SubmachineGun_2": [
+    {
+      "name": "SubmachineGun_2",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        4.043949127197266,
+        0.3185453414916992,
+        1.8473241329193115
+      ],
+      "materials": [
+        "DarkMetal",
+        "Metal",
+        "Black",
+        "Grey"
+      ],
+      "vertices": 760
+    }
+  ],
+  "SubmachineGun_3": [
+    {
+      "name": "SubmachineGun_3",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        3.9975855350494385,
+        0.3185453414916992,
+        1.5226407051086426
+      ],
+      "materials": [
+        "DarkMetal",
+        "Metal",
+        "Black",
+        "Grey"
+      ],
+      "vertices": 893
+    }
+  ],
+  "SubmachineGun_4": [
+    {
+      "name": "SubmachineGun_4",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        2.5494461059570312,
+        0.3185453414916992,
+        1.6380259990692139
+      ],
+      "materials": [
+        "DarkMetal",
+        "Metal",
+        "Black",
+        "Grey"
+      ],
+      "vertices": 558
+    }
+  ],
+  "SubmachineGun_5": [
+    {
+      "name": "SubmachineGun_5",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        5.029029846191406,
+        0.3185453414916992,
+        1.7305446863174438
+      ],
+      "materials": [
+        "DarkMetal",
+        "Metal",
+        "Grey",
+        "Black"
+      ],
+      "vertices": 830
+    }
+  ]
+}

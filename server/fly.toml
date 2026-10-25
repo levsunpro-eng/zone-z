@@ -1,0 +1,45 @@
+# Choose the app name explicitly with: fly deploy --app YOUR_APP --ha=false
+# This in-memory matchmaking service must have exactly ONE Machine.
+primary_region = "fra"
+kill_signal = "SIGINT"
+kill_timeout = "10s"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[experimental]
+  # The Docker ENTRYPOINT already invokes Python with --host 0.0.0.0.
+  # TLS terminates at Fly Proxy; 7780 is private and never publicly exposed.
+  cmd = ["--allow-plaintext", "--max-connections", "64"]
+
+[deploy]
+  strategy = "rolling"
+
+[[services]]
+  protocol = "tcp"
+  internal_port = 7780
+  auto_stop_machines = "off"
+  auto_start_machines = false
+
+  [services.concurrency]
+    type = "connections"
+    soft_limit = 48
+    hard_limit = 64
+
+  [[services.ports]]
+    port = 443
+    handlers = ["tls"]
+    tls_options = { versions = ["TLSv1.2", "TLSv1.3"] }
+
+  [[services.tcp_checks]]
+    grace_period = "5s"
+    interval = "15s"
+    timeout = "2s"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory = "512mb"
+
+[[restart]]
+  policy = "always"

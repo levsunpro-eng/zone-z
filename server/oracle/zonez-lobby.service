@@ -1,0 +1,38 @@
+[Unit]
+Description=ZoneZ TLS lobby and matchmaking relay
+After=network-online.target
+Wants=network-online.target
+ConditionPathExists=/etc/zonez/tls/current/fullchain.pem
+ConditionPathExists=/etc/zonez/tls/current/privkey.pem
+
+[Service]
+Type=simple
+User=zonez
+Group=zonez
+WorkingDirectory=/opt/zonez/server
+ExecStart=/usr/bin/python3 /opt/zonez/server/lobby_server.py --host 0.0.0.0 --port 7780 --max-connections 64 --cert /etc/zonez/tls/current/fullchain.pem --key /etc/zonez/tls/current/privkey.pem
+ExecReload=/bin/kill -HUP $MAINPID
+KillSignal=SIGINT
+TimeoutStopSec=15
+Restart=on-failure
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+UMask=0077
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+CapabilityBoundingSet=
+LockPersonality=yes
+MemoryMax=512M
+TasksMax=64
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target

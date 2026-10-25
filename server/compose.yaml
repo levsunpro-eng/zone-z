@@ -1,0 +1,15 @@
+services:
+  lobby:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "7780:7780/tcp"
+    volumes:
+      - "${ZONEZ_TLS_DIR:?Set ZONEZ_TLS_DIR to the certificate directory}:/run/tls:ro"
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 1g
+    pids_limit: 64

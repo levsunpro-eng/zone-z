@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "balanceVersion": "1.0.2",
+  "currency": { "id": "credits", "nameRu": "Кредиты", "startingBalance": 500, "integerOnly": true, "realMoneyPurchases": false },
+  "matchRewards": {
+    "creditAt": "completed_match_only",
+    "rewardOncePerMatchId": true,
+    "earlyExitReward": 0,
+    "botsReceiveWallets": false,
+    "team_elimination": {
+      "resultCredits": { "win": 300, "loss": 150, "draw": 200 },
+      "creditsPerKill": 20,
+      "creditsPerAssist": 5,
+      "rankScope": "own_team",
+      "rankOrder": ["kills_desc", "assists_desc", "deaths_asc"],
+      "rankMethod": "competition",
+      "rankBonusCredits": { "1": 100, "2": 60, "3": 30 },
+      "exactTieBonus": "same_rank_same_bonus"
+    },
+    "deathmatch": {
+      "completionCredits": 180,
+      "creditsPerKill": 8,
+      "maximumRewardedKills": 30,
+      "rankOrder": ["score_desc", "deaths_asc"],
+      "rankMethod": "competition",
+      "rankBonusCredits": { "1": 250, "2": 150, "3": 100 },
+      "exactTieBonus": "same_rank_same_bonus"
+    },
+    "examples": [
+      { "id": "team_win_first", "modeId": "team_elimination", "result": "win", "kills": 12, "assists": 3, "rank": 1, "expectedCredits": 655 },
+      { "id": "team_loss_fourth", "modeId": "team_elimination", "result": "loss", "kills": 5, "assists": 2, "rank": 4, "expectedCredits": 260 },
+      { "id": "team_draw_second", "modeId": "team_elimination", "result": "draw", "kills": 8, "assists": 4, "rank": 2, "expectedCredits": 440 },
+      { "id": "dm_win_24kills", "modeId": "deathmatch", "kills": 24, "rank": 1, "expectedCredits": 622 },
+      { "id": "dm_capped_third", "modeId": "deathmatch", "kills": 42, "rank": 3, "expectedCredits": 520 },
+      { "id": "dm_eighth", "modeId": "deathmatch", "kills": 10, "rank": 8, "expectedCredits": 260 },
+      { "id": "dm_maximum", "modeId": "deathmatch", "kills": 30, "rank": 1, "expectedCredits": 670 }
+    ]
+  },
+  "progression": {
+    "enabledModeIds": ["team_elimination"],
+    "disabledModeIds": ["deathmatch"],
+    "maximumLevelPerBranch": 5,
+    "levelCostsCredits": [200, 400, 800, 1200, 1800],
+    "costPerFullBranch": 4400,
+    "costAllBranches": 13200,
+    "purchaseSequentially": true,
+    "branches": [
+      { "id": "health", "nameRu": "Здоровье", "healthPerLevel": 4, "baseHealth": 100, "maximumHealth": 120 },
+      { "id": "speed", "nameRu": "Скорость", "movementSpeedFractionPerLevel": 0.02, "maximumMultiplier": 1.1, "basis": "equipped_weapon_movement_speed" },
+      { "id": "strength", "nameRu": "Сила", "ordinaryWeaponDamageFractionPerLevel": 0.02, "maximumMultiplier": 1.1, "appliesToUltimateDamage": false }
+    ]
+  },
+  "cosmetics": {
+    "skinPricesCredits": [300, 750, 1500, 3000],
+    "stickerPriceCredits": 100,
+    "patternPriceCredits": 250,
+    "basePaletteFree": true,
+    "permanentReusableUnlocks": true,
+    "statModifiersAllowed": false
+  },
+  "implementationAssumptions": [
+    "Цена ульты хранится только в abilities.json; это покупка разблокировки, а не каждого применения.",
+    "Готовая граната не выдаётся при покупке или начале матча: даже бесплатную гранату нужно зарядить убийствами.",
+    "Боты участвуют в рейтинге и могут занимать призовые места, но награда начисляется только локальному профилю человека.",
+    "Повторная покупка уже открытой ульты или косметики не списывает кредиты. Возврат покупок и сброс прокачки в первой версии отсутствуют.",
+    "Покупки допускаются только вне активного матча; уровни прокачки и выбранная ульта фиксируются при его запуске. Основное оружие и пистолет разрешено менять перед следующим раундом или возрождением согласно modes.json.",
+    "Постоянные бонусы уровня складываются линейно: множитель 1 + 0.02 * уровень, а не 1.02 в степени уровня.",
+    "Смерть и суицид не вычитают кредиты напрямую; они влияют на счёт и место. Досрочный выход аннулирует всю награду матча.",
+    "Итоговые кредиты и идентификатор обработанного результата сохраняются в одной атомарной операции."
+  ]
+}
